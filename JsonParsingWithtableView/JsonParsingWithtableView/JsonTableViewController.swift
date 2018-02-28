@@ -77,6 +77,7 @@ class JsonTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath)
 
         cell.textLabel?.text = ReceivedDataArray[indexPath.row]
+        cell.textLabel?.textAlignment = .center
 
         return cell
     }
