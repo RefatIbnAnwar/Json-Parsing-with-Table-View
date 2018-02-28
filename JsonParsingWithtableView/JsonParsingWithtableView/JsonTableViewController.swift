@@ -37,7 +37,10 @@ class JsonTableViewController: UITableViewController {
                                 self.ReceivedDataArray.append("\(currencyCode): \(currencyValue)")
                         }
                             //Now we have to reload the table view . THIS IS VERY VERY IMPORTANT !!!!!!
-                            self.tableView.reloadData()
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                            
                         }
                     }
                     catch
